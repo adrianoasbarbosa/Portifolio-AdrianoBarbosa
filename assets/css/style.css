@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #000;
+}
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 2rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.navbar a {
+    font-size: 1.15rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 3.5rem;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: rgb(215, 215, 215);
+    transition: .5s;
+}
+
+#menu-icon {
+    font-size: 3.6rem;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+section {
+    min-height: 100vh;
+    padding: 10rem 9% 2rem;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-content {
+    text-align: center;
+    justify-content: center;
+}
+
+.home-content h1 {
+    font-size: 5.6rem;
+    color: #fff;
+    font-weight: bold;
+    line-height: 1.3;
+}
+
+.home-content .text-animate {
+    position: relative;
+    text-align: center;
+}
+
+.home-content .text-animate h3 {
+    font-size: 5.6rem;
+    font-weight: bold;
+    color: transparent;
+    -webkit-text-stroke: .7px #fff;
+    height: 5.6rem;
+}
+
+.home-content .text-animate h3::after {
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    color: #fff;
+    font-weight: 200;
+    animation: pisca .7s infinite;
+}
+
+@keyframes pisca {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+.home-content p {
+    font-size: 1.3rem;
+    margin: 2rem 0 4rem;
+    color: #fff;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: #000;
+    padding-bottom: 6rem;
+}
+
+.projects-content {
+    text-align: center;
+    color: #fff;
+}
+
+.projects-content h2 {
+    font-size: 3.6rem;
+}
+
+.projects-content p {
+    font-size: 1.2rem;
+    margin: 2rem 0 3rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.project-card {
+    background: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.project-card p {
+    font-size: 1rem;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.buttons {
+    margin-top: 15px;
+}
+
+.btn {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.acesse-ja {
+    border: #fff solid 0.1px;
+    color: #fff;
+}
+
+.github {
+    background-color: #fff;
+    color: #000;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: #000;
+    padding-bottom: 6rem;
+}
+
+.heading {
+    font-size: 5rem;
+    margin-bottom: 3rem;
+    text-align: center;
+    color: #fff;
+}
+
+.about-content {
+    text-align: left;
+    max-width: 700px;
+    position: relative;
+}
+
+.about-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: -1;
+}
+
+.about-content h3 {
+    font-size: 2.6rem;
+    color: #fff;
+}
+
+.about-content p {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 2rem 0 3rem;
+}
+
+::-webkit-scrollbar {
+    overflow: hidden;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+.skill {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background: #000;
+    padding: 10rem 9% 2rem;
+    color: #fff;
+}
+
+.skills-content {
+    text-align: center;
+    color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skills-content h2 {
+    font-size: 3.6rem;
+    margin-bottom: 1rem;
+}
+
+.skills-content p {
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2rem;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.skill span {
+    font-size: 1.5rem;
+}
+
+/* Definindo as cores dos ícones */
+.html-icon {
+    color: #e44d26;
+    /* Cor do HTML5 */
+}
+
+.css-icon {
+    color: #264de4;
+    /* Cor do CSS3 */
+}
+
+.js-icon {
+    color: #f0db4f;
+    /* Cor do JavaScript */
+}
+
+.python-icon {
+    color: #4b8bbe;
+    /* Cor do Python */
+}
+
+.mysql-icon {
+    color: #00758f;
+    /* Cor do MySQL */
+}
+
+.vscode-icon {
+    color: #007acc;
+    /* Cor do VSCode */
+}
+
+.node-icon {
+    color: #68a063;
+    /* Cor do Node.js */
+}
+
+.firebase-icon {
+    color: #ffca28;
+    /* Cor do Firebase */
+}
+
+.github-icon {
+    color: #333;
+    /* Cor do GitHub */
+}
+
+.java-icon {
+    color: #007396;
+    /* Cor do Java */
+}
+
+.figma-icon {
+    color: #f24e1e;
+    /* Cor do Figma */
+}
+
+.bootstrap-icon {
+    color: #7952b3;
+    /* Cor do Bootstrap */
+}
